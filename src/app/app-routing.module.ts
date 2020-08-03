@@ -8,8 +8,12 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'chat-dailog',
     pathMatch: 'full'
+  },
+  {
+    path: 'chat-dailog',
+    loadChildren: () => import('./chat/chat-dailog/chat-dailog.module').then( m => m.ChatDailogPageModule)
   },
 ];
 
